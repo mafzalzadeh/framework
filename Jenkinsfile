@@ -11,6 +11,7 @@ pipeline {
       steps {
         
         sh '''
+                    apt-get install php7.2-bcmath
                     echo $USER
                     php -r "copy(\'https://getcomposer.org/installer\', \'composer-setup.php\');"
                     php composer-setup.php
