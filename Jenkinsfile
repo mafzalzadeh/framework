@@ -9,12 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''apt-get update -q
-                apt-get install git -y
-                apt-get autoremove graphviz -y
-                apt-get install graphviz -y
-                docker-php-ext-install -j$(nproc) ext-bcmath
-                '''
+        
         sh '''
                     echo $USER
                     php -r "copy(\'https://getcomposer.org/installer\', \'composer-setup.php\');"
