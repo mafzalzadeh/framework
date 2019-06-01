@@ -13,7 +13,7 @@ pipeline {
                 apt-get install git -y
                 apt-get autoremove graphviz -y
                 apt-get install graphviz -y
-                docker-php-ext-install ext-bcmath -y
+                docker-php-ext-install ext-bcmath
                 '''
         sh '''
                     echo $USER
