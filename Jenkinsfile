@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'php:7.3'
+      image 'php:7.2'
       args '-u root:sudo'
     }
 
@@ -11,7 +11,7 @@ pipeline {
       steps {
         
         sh '''
-                    apt-get install php7.3-bcmath
+                    apt install php7.2-bcmath
                     echo $USER
                     php -r "copy(\'https://getcomposer.org/installer\', \'composer-setup.php\');"
                     php composer-setup.php
