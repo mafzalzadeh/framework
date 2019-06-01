@@ -28,7 +28,4 @@ pipeline {
       }
     }
   }
-  environment {
-    USER = 'root'
-  }
 }
